@@ -115,11 +115,11 @@ if service_choice != "اختر الخدمة...":
     """)
     
     # معرف تيليجرام
-    telegram_username = "http://t.me/me8mo8"
+    telegram_username = "https://t.me/me8mo8"
     st.markdown(
         f"""
         <div style="text-align: center; margin-top: 20px;">
-            <a href="https://t.me/http://t.me/me8mo8" target="_blank">
+            <a href="https://t.me/me8mo8" target="_blank">
                 <button style="background-color: #0088cc; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 15px; cursor: pointer;">
                     تواصل معي عبر تيليجرام لإرسال الإيصال ✈️
                 </button>
