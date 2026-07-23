@@ -63,7 +63,7 @@ def show_local_html_sample(file_name="PDF_Example.html"):
             # عرض محتوى HTML عبر الـ iframe باستخدام رابط GitHub المباشر
             components.iframe(html_url, height=600, scrolling=True)
         except Exception as e:
-            st.warning(f"عذراً، لم نتمكن من تحميل نموذج المعاينة حالياً. تأكد من رفع الملف '{file_name' إلى مستودع GitHub.")
+            st.warning(f"عذراً، لم نتمكن من تحميل نموذج المعاينة حالياً. تأكد من رفع الملف '{file_name}' إلى مستودع GitHub.")
 
 # --- تفاصيل الخدمات التي تظهر حسب الاختيار ---
 
