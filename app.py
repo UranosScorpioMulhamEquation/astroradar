@@ -53,18 +53,15 @@ links = {
 
 # --- دالة مساعدة لعرض نموذج HTML من GitHub ---
 def show_local_html_sample(file_name="PDF_Example.html"):
-    # بناء رابط الـ Raw المباشر لملف الـ HTML على GitHub
-    # (افتراض أن الفرع الافتراضي هو main، وإذا كان master استبدله بها)
-    html_url = f"https://raw.githubusercontent.com/UranosScorpioMulhamEquation/astroradar/main/{file_name}"
-    
-    # وضعه داخل قائمة منسدلة (Expander) لترتيب شكل الصفحة
     with st.expander("👀 اضغط هنا لمعاينة نموذج التقرير الفلكي (تفاعلي)"):
         try:
-            # عرض محتوى HTML عبر الـ iframe باستخدام رابط GitHub المباشر
-            components.iframe(html_url, height=600, scrolling=True)
-        except Exception as e:
-            st.warning(f"عذراً، لم نتمكن من تحميل نموذج المعاينة حالياً. تأكد من رفع الملف '{file_name}' إلى مستودع GitHub.")
-
+            # قراءة ملف الـ HTML مباشرة من مسار المشروع على الخادم
+            with open(file_name, "r", encoding="utf-8") as f:
+                html_content = f.read()
+            # عرض المحتوى برمجياً مباشرة وليس عبر iframe خارجي
+            components.html(html_content, height=600, scrolling=True)
+        except FileNotFoundError:
+            st.warning(f"عذراً، لم يتم العثور على ملف النموذج ({file_name}) في المستودع.")
 # --- تفاصيل الخدمات التي تظهر حسب الاختيار ---
 
 if service_choice == "تقرير PDF فقط ($25)":
