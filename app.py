@@ -494,7 +494,7 @@ def render_package(icon, title, features, price_text, chips=None):
 
 # --- دالة مساعدة لعرض نموذج HTML من نفس المجلد ---
 def show_local_html_sample(file_name="PDF_Example.html"):
-    with st.expander("👀 اضغط هنا لمعاينة نموذج التقرير الفلكي (تفاعلي)"):
+    with st.expander(" اضغط هنا لمعاينة نموذج التقرير الفلكي "):
         try:
             with open(file_name, "r", encoding="utf-8") as f:
                 html_content = f.read()
