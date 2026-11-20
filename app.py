@@ -24,7 +24,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("الخدمات الاستشارات الفلكية لـ الفلكي Astro Radar")
+st.title("الخدمات الاستشارات لـ الفلكي Astro Radar")
 st.subheader("اختر الباقة المناسبة و احصل على خدمتك ، الدفع البايبال بعد التواصل تلغرام")
 st.markdown("---")
 
