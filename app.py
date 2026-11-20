@@ -83,7 +83,7 @@ elif service_choice == "تقرير ملف تحليل الخارطة السنوي
     """)
     show_local_html_sample("SOLAR_Example.html")
 
-elif service_choice == "حجز استشارة صوتية مطولة مع الفلكي للحصول على كامل خدماته":
+elif service_choice == "حجز استشارة صوتية مع الفلكي للحصول على كامل خدماته":
     st.info("✨ **تفاصيل الباقة الشاملة الكبرى (الأفضل والأكثر قيمة):**")
     st.markdown("""
     * تتضمن جلسة حوارية صوتية مباشرة (مدتها 30 دقيقة).
@@ -96,7 +96,7 @@ elif service_choice == "حجز استشارة صوتية مطولة مع الف�
     * **💰 السعر:** 25 دولار/الخدمة الواحدة (راسل تلغرام الفلكي للدفع بايبال).
     """)
 
-elif service_choice == "حجز شراء برنامج المنظومة الفلكية المتطورة - استرو رادار":
+elif service_choice == "حجز استشارة صوتية لشراء برنامج المنظومة الفلكية المتطورة - استرو رادار":
     st.info("✨ **تفاصيل باقة البرنامج (خاص بالفلكيين):**")
     st.markdown("""
     * تتضمن جلسة حوارية صوتية مباشرة (مدتها 30 دقيقة).
@@ -127,7 +127,7 @@ if service_choice != "اختر الباقة...":
         <div style="text-align: center; margin-top: 20px;">
             <a href="https://t.me/astroradarservices" target="_blank">
                 <button style="background-color: #0088cc; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 15px; cursor: pointer;">
-                    تواصل معي عبر تيليجرام للدفع عبر بايبال أو لإرسال الإيصال وتأكيد الاستلام ✈️
+                    تواصل معي عبر تيليجرام للدفع عبر بايبال ✈️
                 </button>
             </a>
         </div>
