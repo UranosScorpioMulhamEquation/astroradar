@@ -35,8 +35,27 @@ st.markdown(
 }
 
 /* ---------- الخلفية العامة والخطوط ---------- */
-html, body, [class*="css"], .stApp, .stMarkdown, p, li, span, label, div, button, input {
+html, body, [class*="css"], .stApp, .stMarkdown, p, li,
+span:not([data-testid="stIconMaterial"]):not([class*="material"]),
+label, div, button, input {
     font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif !important;
+}
+
+/* إعادة خط الأيقونات حتى لا يظهر اسم الأيقونة كنص (مثل keyboard_arrow_down) */
+[data-testid="stIconMaterial"],
+span[class*="material"],
+.material-icons,
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded', 'Material Symbols Outlined', 'Material Icons' !important;
+    font-feature-settings: 'liga' !important;
+    -webkit-font-feature-settings: 'liga' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    direction: ltr !important;
+    -webkit-font-smoothing: antialiased;
 }
 
 .stApp {
@@ -494,7 +513,7 @@ def render_package(icon, title, features, price_text, chips=None):
 
 # --- دالة مساعدة لعرض نموذج HTML من نفس المجلد ---
 def show_local_html_sample(file_name="PDF_Example.html"):
-    with st.expander(" اضغط هنا لمعاينة نموذج التقرير الفلكي "):
+    with st.expander("👀 اضغط هنا لمعاينة نموذج التقرير الفلكي (تفاعلي)"):
         try:
             with open(file_name, "r", encoding="utf-8") as f:
                 html_content = f.read()
